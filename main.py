@@ -13,10 +13,10 @@ if __name__ == '__main__':
     email['subject'] = 'You won 1,000,000 $$$'
     email.set_content(html.substitute(name='dummy'), 'html')
 
-with smtplib.SMTP(host='smtp.gmail.com', port=587) as smtp:
-    smtp.ehlo()
-    smtp.starttls()
-    # TODO: write your email and password
-    smtp.login('', '')
-    smtp.send_message(email)
-    print("Sent it!")
+    with smtplib.SMTP(host='smtp.gmail.com', port=587) as smtp:
+        smtp.ehlo()
+        smtp.starttls()
+        # TODO: write your email and password
+        smtp.login('', '')
+        smtp.send_message(email)
+        print("Sent it!")
